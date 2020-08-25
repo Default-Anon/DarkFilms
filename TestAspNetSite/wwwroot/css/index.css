@@ -1,0 +1,43 @@
+﻿.darkULItem {
+    margin: 10px;
+}
+.darkUL{
+    background-color: black;
+    border-color: aqua;
+}
+.buttonUL {
+    background: linear-gradient(black,#041336);
+    color: whitesmoke;
+    font-size: 22px;
+    position:center;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.custom{
+    background-color:black;
+    
+}
+.searchFilmsMain {
+    color: green;
+    background-color: black;
+    margin-left:33%;
+    width: 350px;
+}
+.slide-out-div {
+    padding: 20px;
+    width: 250px;
+    background: #ccc;
+    border: 1px solid #29216d;
+}
+.background_Grad {
+    background: linear-gradient(black,#041336);
+}
+.multicolumn_div {
+    column-count: 4;
+    column-rule-width: 2px;
+    column-rule-color: dodgerblue;
+    column-span:all;
+    column-width: 14em;
+    background-color:white;
+}

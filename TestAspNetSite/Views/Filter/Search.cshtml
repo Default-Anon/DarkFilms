@@ -1,0 +1,39 @@
+﻿@model List<Product>
+@{
+    Layout = "_Layout";
+}
+<div style="background-color: black;display:flex;align-items:center;justify-content:center;">
+    <h1>@TempData["state"]</h1>
+    <table>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>
+                    <div class="card background_Grad">
+                        <div class="background_Grad">
+                            <h4 style="color:blue;font-size:16px;text-align:center;">@i.Name</h4>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img src="@i.Image_Url" style="width:250px;height:200px">
+                                </td>
+                            </tr>
+                        </table>
+                        <div>
+                            <span>
+                                <a id="download_id" class="btn btn-primary" style="font-size:22px;width:250px;color:greenyellow" href="@i.Url_to_Download">Download</a>
+                            </span>
+                        </div>
+                        <div>
+                            <details style="width:250px">
+                                <summary style="color:yellow">Информация</summary>
+                                <text style="color:yellow">@i.Description</text>
+                            </details>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

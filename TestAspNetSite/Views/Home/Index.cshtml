@@ -1,0 +1,181 @@
+﻿@model EFProductRepository
+<ul class="nav background_Grad">
+    <li role="presentation" class="darkULItem"><form method="put" asp-action="Index" asp-controller="Home"><button class="background_Grad buttonUL">Главная</button></form></li>
+    <li role="presentation" class="nav-item active darkULItem"><form method="put" asp-action="Index" asp-controller="Admin"><button class="buttonUL">Profile</button></form></li>
+    <li role="presentation" class="nav-item active darkULItem">
+        <div class="col-sm">
+            <details class="background_Grad darkUL" style="max-width:200px;">
+                <summary class="buttonUL" href="#">Category</summary>
+                <table class="class =" background_Grad"" style="width:200px">
+                    <tr>
+                        <td role="presentation" class="darkULItem"><a class="col btn btn-secondary btn-group">First</a></td>
+                    </tr>
+                    <tr>
+                        <td role="presentation" class="darkULItem"><a class="col btn btn-secondary btn-group">First</a></td>
+                    </tr>
+                    <tr>
+                        <td role="presentation" class="darkULItem"><a class="col btn btn-secondary btn-group">First</a></td>
+                    </tr>
+                    <tr>
+                        <td role="presentation" class="darkULItem"><a class="col btn btn-secondary btn-group">First</a></td>
+                    </tr>
+                    <tr>
+                        <td role="presentation" class="darkULItem"><a class="col btn btn-secondary btn-group">First</a></td>
+                    </tr>
+                    <tr>
+                        <td role="presentation" class="darkULItem"><a class="col btn btn-secondary btn-group">First</a></td>
+                    </tr>
+                    <tr>
+                        <td role="presentation" class="darkULItem"><a class="col btn btn-secondary btn-group">First</a></td>
+                    </tr>
+                </table>
+            </details>
+        </div>
+    </li>
+    <li role="presentation" class="nav-item active darkULItem"><form method="put"  asp-action="Index" asp-controller="Filter"><button class="buttonUL">Поиск</button></form></li>
+</ul>
+<div class="row">
+    <div class="col">
+        <div>
+            @for (int i = 0; i < Model.Products.Count; i += 4)
+            {
+<table class="background_Grad" style="border-spacing:30px;">
+    <tr>
+        @if (i <= Model.Products.Count)
+        {
+            try
+            {
+<td>
+    <div class="card background_Grad">
+        <div class="background_Grad">
+            <h4 style="color:blue;font-size:16px;text-align:center;">@Model.Products[i].Name</h4>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <img src="@Model.Products[i].Image_Url" style="width:250px;height:200px">
+                </td>
+            </tr>
+        </table>
+        <div>
+            <span>
+                <a id="download_id" class="btn btn-primary" style="font-size:22px;width:250px;color:greenyellow" href="@Model.Products[i].Url_to_Download">Download</a>
+            </span>
+        </div>
+        <div>
+            <details style="width:250px">
+                <summary style="color:yellow">Информация</summary>
+                <text style="color:yellow">@Model.Products[i].Description</text>
+            </details>
+        </div>
+    </div>
+</td>}
+                    catch { }
+                }
+        @if (i + 1 <= Model.Products.Count)
+        {
+            try
+            {
+<td>
+    <div class="card background_Grad">
+        <div class="background_Grad">
+            <h4 style="color:blue;font-size:16px;text-align:center;">@Model.Products[i + 1].Name</h4>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <img src="@Model.Products[i + 1].Image_Url" style="width:250px;height:200px">
+                </td>
+            </tr>
+        </table>
+        <div>
+            <span>
+                <a id="download_id" class="btn btn-primary" style="font-size:22px;width:250px;color:greenyellow" href="@Model.Products[i + 1].Url_to_Download">Download</a>
+            </span>
+        </div>
+        <div>
+            <details style="width:250px">
+                <summary style="color:yellow">Информация</summary>
+                <text style="color:yellow">@Model.Products[i + 1].Description</text>
+            </details>
+        </div>
+    </div>
+</td>}
+                    catch { }
+                }
+        @if (i + 2 <= Model.Products.Count)
+        {
+            try
+            {
+<td>
+    <div class="card background_Grad">
+        <div class="background_Grad">
+            <h4 style="color:blue;font-size:16px;text-align:center;">@Model.Products[i + 2].Name</h4>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <img src="@Model.Products[i + 2].Image_Url" style="width:250px;height:200px">
+                </td>
+            </tr>
+        </table>
+        <div>
+            <span>
+                <a id="download_id" class="btn btn-primary" style="font-size:22px;width:250px;color:greenyellow" href="@Model.Products[i + 2].Url_to_Download">Download</a>
+            </span>
+        </div>
+        <div>
+            <details style="width:250px">
+                <summary style="color:yellow">Информация</summary>
+                <text style="color:yellow">@Model.Products[i + 2].Description</text>
+            </details>
+        </div>
+    </div>
+</td>}
+                    catch { }
+                }
+        @if (i + 3 <= Model.Products.Count)
+        {
+            try
+            {
+<td>
+    <div class="card background_Grad">
+        <div class="background_Grad">
+            <h4 style="color:blue;font-size:16px;text-align:center;">@Model.Products[i + 3].Name</h4>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <img src="@Model.Products[i + 3].Image_Url" style="width:250px;height:200px">
+                </td>
+            </tr>
+        </table>
+        <div>
+            <span>
+                <a id="download_id" class="btn btn-primary" style="font-size:22px;width:250px;color:greenyellow" href="@Model.Products[i + 3].Url_to_Download">Download</a>
+            </span>
+        </div>
+        <div>
+            <details style="width:250px">
+                <summary style="color:yellow">Информация</summary>
+                <text style="color:yellow">@Model.Products[i + 3].Description</text>
+            </details>
+        </div>
+    </div>
+</td>}
+                    catch { }
+                }
+    </tr>
+</table>}
+
+        </div>
+    </div>
+    <div class="col">
+        <form method="post" asp-action="Filter" asp-controller="Filter">
+            <table>
+                <tr>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>

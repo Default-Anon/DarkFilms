@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet"
+          asp-href-include="/lib/bootstrap/dist/**/*.min.css"
+          asp-href-exclude="**/*-reboot*,**/*-grid*" 
+          href="~/css/index.css"/>
+    <title>DarkFilms</title>
+</head>
+<body style="background: linear-gradient(black,#041336)">
+    <div id="root" style="overflow-x:hidden;">
+        @RenderBody()
+    </div>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

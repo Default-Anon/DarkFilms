@@ -1,0 +1,12 @@
+﻿@model Filter
+@{ 
+    Layout = "_Layout";
+}
+<div style="background-color: black;display:flex;align-items:center;justify-content:center;">
+    <form method="post">
+        <h1>Поиск Фильмов</h1>
+        <input placeholder="Введите название" asp-for="Name" />
+        <button class="btn btn-primary" type="submit">Найти</button>
+    </form>
+    <h1>@TempData["state"]</h1>
+</div>
